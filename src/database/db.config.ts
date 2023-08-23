@@ -3,7 +3,7 @@ import devConfig from './dev.config';
 
 export default registerAs('typeOrmConfig', async () => {
   // eslint-disable-next-line prefer-const
-  let data = devConfig();
+  const data = devConfig();
   const dbSync = process.env.DB_SYNC === 'true';
   return {
     // eslint-disable-next-line @typescript-eslint/prefer-as-const
